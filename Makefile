@@ -12,6 +12,6 @@ pdf:
 	pdflatex $(MAIN)
 
 clean:
-	rm -rf *.aux *.bbl *.blg *.log *.out *.pdf *.toc *.dvi *.lof *.lot
+	rm -rf *.aux *.bbl *.blg *.log *.out *.pdf *.toc *.dvi *.lof *.lot *.fdb_latexmk *.fls *.synctex.gz
 
 .PHONY: all pdf clean
