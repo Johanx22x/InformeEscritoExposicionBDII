@@ -6,3 +6,8 @@
 *.toc
 *.bbl
 *.blg
+*.dvi
+*.fdb_latexmk
+*.synctex.gz
+*.fls
+*.pdf
