@@ -1,0 +1,126 @@
+\section{Overview}
+
+According to \cite{wikipedia_spark}, Apache Spark is ``\emph{an open-source unified 
+analytics engine for large-scale data processing}``. It is a general-purpose
+computing engine that allows for the processing of large amounts of data in a
+distributed manner. It is designed to be fast and general-purpose, and it
+achieves this by using in-memory primitives and optimizations. It is also
+designed to be easy to use, with APIs available in Java, Scala, Python, and R
+\cite{openai_chatgpt}.
+
+\section{History}
+
+Apache Spark was initially developed in 2009 by AMPLab (Algorithms, Machines and
+People Lab) at the University of California, Berkeley, by Matei Zahara, as part 
+of a project for speeding up data processing on distributed systems. It was 
+mainly inspired by the limitations of Hadoop MapReduce, because it required data
+to be written on disk after every operation it made, making it a slow and high
+consuming solution \cite{openai_chatgpt}.
+
+Apache Spark started as a research project at the UC Berkeley AMPLab in 2009,
+and was open sourced in early 2010.  After being released, Spark grew into a
+broad developer community, and moved to the Apache Software Foundation in 2013.
+Today, the project is developed collaboratively by a community of hundreds of
+developers from hundreds of organizations \cite{apache_spark}.
+
+Nowadays, Spark is one of the most active projects in the Apache Software 
+Foundation, with more than 400 contributions per month, and more than 2000
+contributors in the official GitHub repository \cite{repo_tracker}.
+
+\section{Features}
+
+An important aspect of Apache Spark is RDDs (Resilient Distributed Datasets).
+RDDs are the fundamental data structure in SPark. They are a collection of
+objects that can be processed in parallel with the use of a cluster. RDDs can be
+partitioned across multiple nodes in a cluster, they keep track of a lineage,
+the sequence of transformations applied to their parent data in order to derive
+their current state; this allows to easily recover data, as the lineage
+information can be used to restore automatically data in case of errors or
+attacks \cite{openai_chatgpt}.
+
+According to \cite{openai_chatgpt} and \cite{apache_spark}, Spark has many
+features that make it a powerful tool for data processing. Some of these
+features are:
+
+\begin{itemize}
+    \item \textbf{Speed:} Spark is designed for high speed data processing
+    through in-memory computing, allowing to cache data in RAM, reducing the
+    need of disk I/O and making it faster.
+    \item \textbf{In-Memory Processing:} It can perform data processing
+    in-memory, resulting in faster data accessing, and computation.
+    \item \textbf{Fault tolerance:} Through RDDs, Spark makes data reliable and
+    allows to recover lost data automatically. RDDs store data across multiple
+    nodes in a cluster.
+    \item \textbf{Ease of use:} Spark has APIs in many languages like Scala,
+    Java, Python and R.
+    \item \textbf{Unified Data Processing:} Spark provides a unified platform
+    for batch processing, stream processing, machine learning and graph
+    processing. Only one system is needed for multiple tasks.
+    \item \textbf{Scalability:} Horizontally scalable, meaning it can handle
+    large-scale data processing through clusters.
+    \item \textbf{Extensibility:} It has a modular architecture, which allows
+    to integrate Spark with other numerous systems. It supports various data
+    sources, like Hadoop Distributed File System (HDFS), Apache HBase, Apache
+    Cassandra, etc.
+    \item \textbf{Versatility:} It supports lots of data processing tasks like
+    SQL queries, streaming data, machine learning and graph processing.
+\end{itemize}
+
+\section{Components}
+
+Apache Spark is composed of several components, each one with a specific
+functionality. These components are:
+
+\begin{itemize}
+    \item \textbf{Spark Core:} Provides basic functionality for data processing.
+    RDDs compose it.
+    \item \textbf{Spark SQL:} Allows to work with structured data with SQL like
+    queries. The data that is being queried is stored in RDDs, thus the core.
+    Allows working with external data sources like Apache Hive, JSON, Parquet,
+    etc.
+    \item \textbf{Spark Streaming:} Allows real time data processing. It divides
+    data streams in batches that it processes in parallel.
+    \item \textbf{Spark MLib:} Provides machine learning algorithms for
+    classification, regression clustering, collaborative filtering, etc.
+    \item \textbf{Spark GraphX:} For graph processing tasks. Offers an API for
+    creating and manipulating graphs. Also gives graph algorithms for social
+    network analysis and graph based computations.
+    \item \textbf{SparkR:} An R package that allows to use Apache Spark in R
+    language.
+    \item \textbf{Spark Catalyst:} Query optimizer and planner for SparkQSL.
+    Optimizes SQL queries and data processing workflows for performance and
+    efficiency.
+    \item \textbf{Spark Tungsten:} An execution engine designed for better
+    performance through memory management and code generation optimizations.
+    \item \textbf{Spark PySpark:} Python API, allows to use Spark on Python.
+\end{itemize}
+
+\section{Advantages and Disadvantages}
+
+Spark has many advantages over other data processing systems, mostly of them 
+related to its features briefly described in the previous section. However, it
+also has some disadvantages, mostly related to its complexity and the learning
+curve needed to use it. According to \cite{openai_chatgpt}, some of the
+most important disadvantages of Spark are:
+
+\begin{itemize}
+    \item \textbf{High Memory Usage:} Spark's in-memory processing leads to
+    higher memory usage compared to disk-based processing systems.
+    \item \textbf{Advanced:} It can be complex for newcomers that are not
+    familiar with distributed computing concepts.
+    \item \textbf{Cluster Focused:} Spark requires a cluster of machines for it
+    to work effectively, which increases costs.
+    \item \textbf{Not Native Graph Processing:} Spark requires the library
+    GraphX for graph processing capabilities, which gives it a lesser
+    performance compared to other specialized graph processing frameworks.
+    \item \textbf{Slow for Small Data:} Spark is less efficient for processing
+    small datasets due to its distributed nature and cluster approach.
+    \item \textbf{Limited Interactive Shell:} Spark's interactive shell might
+    have latency due to its nature, meaning it has delay.
+    \item \textbf{Storage Limitations:} Spark is more limited in data storage
+    capabilities than other specialized databases or data storage systems. There
+    are better alternatives for high-performance storage needs or related.
+    \item \textbf{Java Dependency:} Spark is written in Scala and runs on Java
+    Virtual Machine. It has a limitation if desired to use it on certain
+    languages.
+\end{itemize}
