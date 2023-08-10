@@ -3,7 +3,7 @@
 
 % Front page
 \thispagestyle{empty}
-\title{\Large \textbf{Informe Escrito}}
+\title{\Large \textbf{Apache Spark Report}}
 \author{Johan Rodríguez \\Karina Urbina \\Mathew Carballo} % (autores separados, consultar al docente)
 \affiliation{Instituto Tecnológico de Costa Rica}
 \course{IC4302 - Bases de Datos II}
@@ -14,11 +14,17 @@
 \begin{document}
 \maketitle
 
+% Executive summary
+\input{src/executive_summary.tex}
+
 % Index
 \input{lib/index.tex}
 
 % Introduction
 \input{src/introduction.tex}
+\input{src/development.tex}
+\input{src/conclusions.tex}
+\input{src/recommendations.tex}
 
 % Bibliography
 \bibliography{bibliography}
